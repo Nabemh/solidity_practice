@@ -15,6 +15,7 @@ contract PausableToken {
 
     modifier onlyOwner() {
         // 1️⃣ Implement the modifier to allow only the owner to call the function
+        require(msg.sender == owner, "Only ownner is allowed to make function call");
         _;
     }
 
