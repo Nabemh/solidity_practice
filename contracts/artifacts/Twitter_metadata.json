@@ -11,6 +11,37 @@
 				"type": "constructor"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "author",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "content",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "TweetCreated",
+				"type": "event"
+			},
+			{
 				"inputs": [],
 				"name": "MAX_TWEET_LENGTH",
 				"outputs": [
@@ -27,11 +58,11 @@
 				"inputs": [
 					{
 						"internalType": "uint16",
-						"name": "newTweetLenght",
+						"name": "newTweetLength",
 						"type": "uint16"
 					}
 				],
-				"name": "changeTweetLenght",
+				"name": "changeTweetLength",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -61,6 +92,11 @@
 				"outputs": [
 					{
 						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
 							{
 								"internalType": "address",
 								"name": "author",
@@ -103,6 +139,11 @@
 					{
 						"components": [
 							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
 								"internalType": "address",
 								"name": "author",
 								"type": "address"
@@ -129,6 +170,24 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "author",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "likeTweet",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -160,6 +219,11 @@
 				"name": "tweets",
 				"outputs": [
 					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
 						"internalType": "address",
 						"name": "author",
 						"type": "address"
@@ -182,6 +246,24 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "author",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "unlikeTweet",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -197,7 +279,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Twitter-Mod.sol": "Twitter"
+			"contracts/Twitter-AddEvent.sol": "Twitter"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -211,12 +293,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Twitter-Mod.sol": {
-			"keccak256": "0x2cc9ffd755d05894c0092931599050fbce00cc0be5fef1556f28dc881fd3a937",
+		"contracts/Twitter-AddEvent.sol": {
+			"keccak256": "0x6e288ebeeb27a2d4d721f8e908ecc06ac56a30de4d89255c74a4d6376791fb2b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c023ac51b3ece8772eab81f47ed5f64cdf27208fab277c9578364c6d64d6089c",
-				"dweb:/ipfs/QmR1ZyJGzCBF3iznmAbh4sZXiGWPNfJrQqEJYau5pjM8XV"
+				"bzz-raw://8c81402257a78a995e29b3c83b456ddfd91cd74d07a5815cd015d1b21182f1a7",
+				"dweb:/ipfs/QmP8hbKHagvPkGews4qEuHPeLCv2pToWjaBAoC9NjLhg8P"
 			]
 		}
 	},
