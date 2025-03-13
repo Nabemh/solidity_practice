@@ -27,11 +27,11 @@
 				"inputs": [
 					{
 						"internalType": "uint16",
-						"name": "newTweetLenght",
+						"name": "newTweetLength",
 						"type": "uint16"
 					}
 				],
-				"name": "changeTweetLenght",
+				"name": "changeTweetLength",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -61,6 +61,11 @@
 				"outputs": [
 					{
 						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
 							{
 								"internalType": "address",
 								"name": "author",
@@ -103,6 +108,11 @@
 					{
 						"components": [
 							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
 								"internalType": "address",
 								"name": "author",
 								"type": "address"
@@ -129,6 +139,24 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "author",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "likeTweet",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -159,6 +187,11 @@
 				],
 				"name": "tweets",
 				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
 					{
 						"internalType": "address",
 						"name": "author",
@@ -197,7 +230,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Twitter-Mod.sol": "Twitter"
+			"contracts/Tweet-like.sol": "Twitter"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -211,12 +244,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Twitter-Mod.sol": {
-			"keccak256": "0x2cc9ffd755d05894c0092931599050fbce00cc0be5fef1556f28dc881fd3a937",
+		"contracts/Tweet-like.sol": {
+			"keccak256": "0x10af60c8bfe53cbc68bbd3da7978a1fd8fb2d6fe7d0463d4389244f2fc20d517",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c023ac51b3ece8772eab81f47ed5f64cdf27208fab277c9578364c6d64d6089c",
-				"dweb:/ipfs/QmR1ZyJGzCBF3iznmAbh4sZXiGWPNfJrQqEJYau5pjM8XV"
+				"bzz-raw://5a1c99f09c3cef42d9e9f912c48a89547f6f8f0834841fc9acac196fca5d31b1",
+				"dweb:/ipfs/QmQEgnxnBxVEuejSGV8DKv7yxjM7eWn1gV4kzzT7PRvMP6"
 			]
 		}
 	},
