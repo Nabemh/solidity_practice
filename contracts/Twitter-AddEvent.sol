@@ -27,7 +27,7 @@ contract Twitter {
 
     event TweetCreated(uint256 id, address indexed author, string content, uint256 timestamp);
     event TweetLiked(address indexed tweetAuthor, uint256 tweetId, address indexed liker, uint256 newLikeCount);
-
+    event TweetUnliked(address indexed tweetAuthor, uint256 tweetId, address indexed unliker, uint256 newLikeCount);
 
     constructor() {
         owner = msg.sender;
@@ -71,6 +71,8 @@ contract Twitter {
         require(tweets[author][id].likes > 0, "TWEET HAS NO LIKES");
         
         tweets[author][id].likes--;
+
+        emit TweetLiked(author, id, msg.sender, tweets[author][id].likes);
     }
 
     function getTweet( uint _i) public view returns (Tweet memory) {
