@@ -215,6 +215,24 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "author",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "unlikeTweet",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -245,11 +263,11 @@
 	},
 	"sources": {
 		"contracts/Tweet-like.sol": {
-			"keccak256": "0x10af60c8bfe53cbc68bbd3da7978a1fd8fb2d6fe7d0463d4389244f2fc20d517",
+			"keccak256": "0x38d07f98051fff6d10e08645c1699b0211226016008d05a5dc1d03061273138d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5a1c99f09c3cef42d9e9f912c48a89547f6f8f0834841fc9acac196fca5d31b1",
-				"dweb:/ipfs/QmQEgnxnBxVEuejSGV8DKv7yxjM7eWn1gV4kzzT7PRvMP6"
+				"bzz-raw://03fe7261eea2c011563dcc7416839f2e97a2d6bef67ce9301922606522450e43",
+				"dweb:/ipfs/Qmcn21vuT6EaMHwmtxhq85SrWpxaLbVVK8tcn7uZDaRxxy"
 			]
 		}
 	},
