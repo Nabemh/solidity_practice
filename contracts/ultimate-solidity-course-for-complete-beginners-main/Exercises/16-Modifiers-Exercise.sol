@@ -22,7 +22,7 @@ contract PausableToken {
     // 2️⃣ Implement the modifier to check if the contract is not paused
 
     modifier notPaused(){
-        require(paused == true, "Contract is paused");
+        require(paused == false, "Contract is paused");
         _;
     }
 
@@ -37,6 +37,7 @@ contract PausableToken {
     // 3️⃣ use the notPaused modifier in this function 
     function transfer(address to, uint amount) public notPaused {
         require(balances[msg.sender] >= amount, "Insufficient balance");
+
         balances[msg.sender] -= amount;
         balances[to] += amount;
     }
