@@ -52,6 +52,8 @@ contract Twitter {
         });
 
         tweets[msg.sender].push(newTweet);
+
+        emit TweetCreated(newTweet.id, newTweet.author, newTweet.content, newTweet.timestamp);
     }
 
     function likeTweet(address author, uint256 id) external {  
