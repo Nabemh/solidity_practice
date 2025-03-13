@@ -6,6 +6,37 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_TWEET_LENGTH",
+				"outputs": [
+					{
+						"internalType": "uint16",
+						"name": "",
+						"type": "uint16"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint16",
+						"name": "newTweetLenght",
+						"type": "uint16"
+					}
+				],
+				"name": "changeTweetLenght",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "string",
@@ -101,6 +132,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -153,7 +197,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Twitter_Struct.sol": "Twitter"
+			"contracts/Twitter-Mod.sol": "Twitter"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -167,12 +211,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Twitter_Struct.sol": {
-			"keccak256": "0xc535b675b227aee233ffaab826acf00118cb59a77093c4cdbb18098980e94867",
+		"contracts/Twitter-Mod.sol": {
+			"keccak256": "0x5c01b140ad1ed2cb1517c21cb1ceb5b743d526e38ecc65c65c31aa6c75e1aaae",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://571196437863d8e481217133c756cb49fd95c3b944358c1e3a6b0e59e95ea2b0",
-				"dweb:/ipfs/QmfC3mVY1Prjpg7BoDk69SJbrQVpAZZRFb5eWGxPGKPPhd"
+				"bzz-raw://d9451ab342b6eefcb980758337951999ae47e97315f185e8bf127b17f1852d7c",
+				"dweb:/ipfs/QmNj1Wucn9tbTFFS9RZhUrjz2po9RNWPGBkSuju8kS13AJ"
 			]
 		}
 	},
