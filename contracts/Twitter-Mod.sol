@@ -25,7 +25,12 @@ contract Twitter {
         owner = msg.sender;
     }
 
-    function changeTweetLenght(uint16 newTweetLenght) public {
+    modifier onlyOwner(){
+        require(msg.sender == owner, "Can only be used by owner!");
+        _;
+    }
+
+    function changeTweetLenght(uint16 newTweetLenght) public onlyOwner {
         MAX_TWEET_LENGTH = newTweetLenght;
     }
 
