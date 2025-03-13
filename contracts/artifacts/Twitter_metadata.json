@@ -27,11 +27,11 @@
 				"inputs": [
 					{
 						"internalType": "uint16",
-						"name": "newTweetLength",
+						"name": "newTweetLenght",
 						"type": "uint16"
 					}
 				],
-				"name": "changeTweetLength",
+				"name": "changeTweetLenght",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -61,11 +61,6 @@
 				"outputs": [
 					{
 						"components": [
-							{
-								"internalType": "uint256",
-								"name": "id",
-								"type": "uint256"
-							},
 							{
 								"internalType": "address",
 								"name": "author",
@@ -108,11 +103,6 @@
 					{
 						"components": [
 							{
-								"internalType": "uint256",
-								"name": "id",
-								"type": "uint256"
-							},
-							{
 								"internalType": "address",
 								"name": "author",
 								"type": "address"
@@ -139,24 +129,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "author",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "id",
-						"type": "uint256"
-					}
-				],
-				"name": "likeTweet",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -188,11 +160,6 @@
 				"name": "tweets",
 				"outputs": [
 					{
-						"internalType": "uint256",
-						"name": "id",
-						"type": "uint256"
-					},
-					{
 						"internalType": "address",
 						"name": "author",
 						"type": "address"
@@ -215,24 +182,6 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "author",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "id",
-						"type": "uint256"
-					}
-				],
-				"name": "unlikeTweet",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -248,7 +197,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Tweet-like.sol": "Twitter"
+			"contracts/Twitter-Mod.sol": "Twitter"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -262,12 +211,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Tweet-like.sol": {
-			"keccak256": "0x38d07f98051fff6d10e08645c1699b0211226016008d05a5dc1d03061273138d",
+		"contracts/Twitter-Mod.sol": {
+			"keccak256": "0x2cc9ffd755d05894c0092931599050fbce00cc0be5fef1556f28dc881fd3a937",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://03fe7261eea2c011563dcc7416839f2e97a2d6bef67ce9301922606522450e43",
-				"dweb:/ipfs/Qmcn21vuT6EaMHwmtxhq85SrWpxaLbVVK8tcn7uZDaRxxy"
+				"bzz-raw://c023ac51b3ece8772eab81f47ed5f64cdf27208fab277c9578364c6d64d6089c",
+				"dweb:/ipfs/QmR1ZyJGzCBF3iznmAbh4sZXiGWPNfJrQqEJYau5pjM8XV"
 			]
 		}
 	},
