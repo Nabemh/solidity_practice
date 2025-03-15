@@ -20,7 +20,7 @@
 						"type": "uint256"
 					},
 					{
-						"indexed": true,
+						"indexed": false,
 						"internalType": "address",
 						"name": "author",
 						"type": "address"
@@ -45,7 +45,13 @@
 				"anonymous": false,
 				"inputs": [
 					{
-						"indexed": true,
+						"indexed": false,
+						"internalType": "address",
+						"name": "liker",
+						"type": "address"
+					},
+					{
+						"indexed": false,
 						"internalType": "address",
 						"name": "tweetAuthor",
 						"type": "address"
@@ -55,12 +61,6 @@
 						"internalType": "uint256",
 						"name": "tweetId",
 						"type": "uint256"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "liker",
-						"type": "address"
 					},
 					{
 						"indexed": false,
@@ -76,7 +76,13 @@
 				"anonymous": false,
 				"inputs": [
 					{
-						"indexed": true,
+						"indexed": false,
+						"internalType": "address",
+						"name": "unliker",
+						"type": "address"
+					},
+					{
+						"indexed": false,
 						"internalType": "address",
 						"name": "tweetAuthor",
 						"type": "address"
@@ -86,12 +92,6 @@
 						"internalType": "uint256",
 						"name": "tweetId",
 						"type": "uint256"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "unliker",
-						"type": "address"
 					},
 					{
 						"indexed": false,
@@ -183,6 +183,25 @@
 						"internalType": "struct Twitter.Tweet[]",
 						"name": "",
 						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_author",
+						"type": "address"
+					}
+				],
+				"name": "getTotalLikes",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -341,7 +360,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Twitter-AddEvent.sol": "Twitter"
+			"contracts/TotalLikes.sol": "Twitter"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -355,12 +374,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Twitter-AddEvent.sol": {
-			"keccak256": "0x848b2307c78283178edd9ea6238e3cf2fd81b85702af60d23ff7514f1ee43f9d",
+		"contracts/TotalLikes.sol": {
+			"keccak256": "0x3a0dbe806f25a88d4195b88323844218271abec45c2bcd42675c5671f676e66b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0a56bd7051c2703311fdef249fe26c11a71dbf87d1775eb8facfd5871c20a0c7",
-				"dweb:/ipfs/QmdRV1FC6EoKXXDghX8tdcsLrGHG7XpqAUoNmoiGRWVCiL"
+				"bzz-raw://210cec97541eb9eb7450e0f51b0c2cdb2172a1f343d6912d444cfa772b0356f9",
+				"dweb:/ipfs/QmXyBgYtt8zGxrLkD2pnATcKAKRQhcYhkAtnooFQMhE3gi"
 			]
 		}
 	},
