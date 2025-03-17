@@ -4,7 +4,7 @@
 // 3️⃣ Initialize the IProfile in the contructor ✅ 
 // HINT: don't forget to include the _profileContract address as a input 
 // 4️⃣ Create a modifier called onlyRegistered that require the msg.sender to have a profile ✅
-// HINT: use the getProfile() to get the user
+// HINT: use the getProfile() to get the user 
 // HINT: check if displayName.length > 0 to make sure the user exists
 // 5️⃣ ADD the onlyRegistered modified to createTweet, likeTweet, and unlikeTweet function ✅
 
@@ -19,6 +19,7 @@ interface IProfile {
     }
     
     // CODE HERE
+    function getProfile(address _user) external view returns(UserProfile memory);
 }
 
 contract Twitter is Ownable {
@@ -41,8 +42,13 @@ contract Twitter is Ownable {
     event TweetLiked(address liker, address tweetAuthor, uint256 tweetId, uint256 newLikeCount);
     event TweetUnliked(address unliker, address tweetAuthor, uint256 tweetId, uint256 newLikeCount);
 
+   modifier onlyRegisterd(){
+        IProfile.UserProfile memory userProfileTemp = profileContract.getProfile(msg.sender);
+        _;
+   }
+   
     constructor(address _profileContract) Ownable(msg.sender){
-       
+        profileContract = IProfile(_profileContract);
     }
 
     function changeTweetLength(uint16 newTweetLength) public onlyOwner {
