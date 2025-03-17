@@ -44,6 +44,7 @@ contract Twitter is Ownable {
 
    modifier onlyRegisterd(){
         IProfile.UserProfile memory userProfileTemp = profileContract.getProfile(msg.sender);
+        require(bytes(userProfileTemp.displayName).length > 0, "User not registered!");
         _;
    }
    

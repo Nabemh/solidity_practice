@@ -480,11 +480,11 @@
 			]
 		},
 		"contracts/Twitter-interaction.sol": {
-			"keccak256": "0x08c2b009be3f119c3c100d09334cfb840856d449acf18e7281434487fe998d24",
+			"keccak256": "0x095661a6cac06549d766832ed98eed3cd7107eb59911c3b757d91c450eb437f0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2cd0994325f92ce546ad49f1ed5b99a3828fd14513ba2a0e3f758d50605105a4",
-				"dweb:/ipfs/QmQXBV9hkCwZi3ZyBqz2iwhcTeoM9ZoxbveFwZn1gGE6nH"
+				"bzz-raw://6888e054f6dc301d74815b61a312facd9c7a60ad301d9492d0acf80ede1f3fc6",
+				"dweb:/ipfs/QmVco4gBWVtgSy8iDQkPb7yM6zXhFX97A527WvA5s2De61"
 			]
 		}
 	},
