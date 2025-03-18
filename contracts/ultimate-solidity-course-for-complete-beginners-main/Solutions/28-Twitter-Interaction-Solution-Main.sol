@@ -49,7 +49,7 @@ contract Twitter is Ownable {
         _;
     }
 
-    constructor(address _profileContract) {
+    constructor(address _profileContract) Ownable(msg.sender) {
         profileContract = IProfile(_profileContract);
     }
 
